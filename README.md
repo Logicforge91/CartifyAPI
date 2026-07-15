@@ -21,7 +21,7 @@ Run the application with the default `local` profile:
 The `dev` profile includes the same local infrastructure configuration and can be started on Windows with:
 
 ```shell
-mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=dev
+mvnw.cmd "-Dspring-boot.run.profiles=dev" spring-boot:run
 ```
 
 The local profile connects to the `cartify` database on port `3307` using the defaults in `application-local.yml`, and Redis is exposed on port `6379`. Override the database connection with `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD`.
