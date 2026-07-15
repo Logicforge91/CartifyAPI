@@ -3,7 +3,7 @@ services:
     image: mysql:8.4
     environment:
       MYSQL_DATABASE: cartify
-      MYSQL_ROOT_PASSWORD: User@123
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-User@123}
     ports:
       - "3307:3306"
     volumes:

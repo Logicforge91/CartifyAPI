@@ -10,3 +10,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+    expose-development-tokens: false
+  bootstrap-admin:
+    email: ${APP_INITIAL_ADMIN_EMAIL:}
+    password: ${APP_INITIAL_ADMIN_PASSWORD:}

@@ -4,3 +4,11 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+app:
+  security:
+    jwt:
+      secret: dGVzdC1qd3Qtc2VjcmV0LW11c3QtYmUtYXQtbGVhc3QtMzItYnl0ZXM=
+    expose-development-tokens: true
+  bootstrap-admin:
+    email: admin-test@cartify.local
+    password: AdminSecurePass123!
