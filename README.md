@@ -46,3 +46,9 @@ Create each schema change as a new migration under `src/main/resources/db/migrat
 - The health endpoint is available at `GET /actuator/health`; only `health` and `info` actuator endpoints are exposed.
 
 See `docs/BRANCHING.md` for the repository branching and promotion workflow.
+
+## Authentication
+
+Authentication uses short-lived signed access tokens and rotating opaque refresh tokens. Customer registration, email verification, login, refresh, logout, forgot/reset password, login throttling, and role-based authorization are available under `/api/v1/auth`.
+
+See `docs/AUTHENTICATION.md` for endpoint payloads, route rules, roles, token lifetimes, administrator bootstrap, and production SMTP configuration.

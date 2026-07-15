@@ -1,0 +1,7 @@
+
+docker exec -it cartifyapi-mysql-1 mysql -uroot -p cartify
+
+change-me
+
+docker compose up -d
+.\mvnw.cmd "-Dspring-boot.run.profiles=dev" spring-boot:run

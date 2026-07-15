@@ -68,13 +68,13 @@ public class GlobalExceptionHandler {
                 request);
     }
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ApiResponse<Void>> handleNotFound(
-            ResourceNotFoundException exception,
+    @ExceptionHandler(ApiException.class)
+    public ResponseEntity<ApiResponse<Void>> handleApiException(
+            ApiException exception,
             HttpServletRequest request) {
         return response(
-                HttpStatus.NOT_FOUND,
-                "RESOURCE_NOT_FOUND",
+                exception.getStatus(),
+                exception.getCode(),
                 exception.getMessage(),
                 Map.of(),
                 request);

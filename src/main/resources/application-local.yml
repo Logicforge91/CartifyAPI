@@ -3,9 +3,15 @@ spring:
     url: ${DB_URL:jdbc:mysql://localhost:3307/cartify?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:User@123}
-  flyway:
-    clean-disabled: false
 management:
   endpoint:
     health:
       show-details: always
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:bG9jYWwtZGV2ZWxvcG1lbnQtc2VjcmV0LWNoYW5nZS1tZQ==}
+    expose-development-tokens: true
+  bootstrap-admin:
+    email: ${APP_INITIAL_ADMIN_EMAIL:}
+    password: ${APP_INITIAL_ADMIN_PASSWORD:}
