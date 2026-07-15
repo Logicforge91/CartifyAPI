@@ -1,0 +1,14 @@
+
+docker compose up -d redis
+
+
+Start MySQL and Redis
+docker compose up -d
+
+Check their status:
+
+docker compose ps
+
+Start Spring Boot
+
+mvnw.cmd "-Dspring-boot.run.profiles=dev" spring-boot:run
