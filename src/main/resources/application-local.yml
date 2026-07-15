@@ -5,3 +5,7 @@ spring:
     password: ${DB_PASSWORD:User@123}
   flyway:
     clean-disabled: false
+management:
+  endpoint:
+    health:
+      show-details: always
