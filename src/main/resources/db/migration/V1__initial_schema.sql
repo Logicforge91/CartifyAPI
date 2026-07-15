@@ -1,0 +1,3 @@
+-- Initial Cartify schema baseline.
+-- Add tables and other schema objects through new versioned migrations as
+-- domain features are introduced. Never modify an applied migration.
